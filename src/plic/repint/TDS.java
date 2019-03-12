@@ -65,6 +65,13 @@ public class TDS {
 		this.cptDeplacement -= 4;
 	}
 	
+	/**
+	 * Renvoie le symbole associe a la clef
+	 * @param e
+	 * 		Entree et clef de la table (nom de la variable)
+	 * @return Symbole
+	 * 		Symbole associe a l'entree
+	 */
 	public Symbole identifier(Entree e) {
 		return this.table.get(e);
 	}

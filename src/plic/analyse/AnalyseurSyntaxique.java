@@ -186,9 +186,9 @@ public class AnalyseurSyntaxique {
 			
 			//On va ajouter l'expression dans le bloc
 			if(Nombre.estNombre(value))
-				bloc.addInstruction(new Affectation(new Idf(idf), new Nombre(Integer.parseInt(value))));
+				bloc.add(new Affectation(new Idf(new Entree(idf)), new Nombre(Integer.parseInt(value))));
 			else
-				bloc.addInstruction(new Affectation(new Idf(idf), new Idf(value)));
+				bloc.add(new Affectation(new Idf(new Entree(idf)), new Idf(new Entree(value))));
 			
 			return bloc;
 	}
@@ -204,9 +204,9 @@ public class AnalyseurSyntaxique {
 		//On ajoute dans l'arbre l'instruction ecrire
 		//On regarde s'il s'agit bien d'un bloc pour savoir quelle classe utilisée
 		if(Nombre.estNombre(value))
-			bloc.addInstruction(new Ecrire(new Nombre(Integer.parseInt(value))));
+			bloc.add(new Ecrire(new Nombre(Integer.parseInt(value))));
 		else
-			bloc.addInstruction(new Ecrire(new Idf(value)));
+			bloc.add(new Ecrire(new Idf(new Entree(value))));
 		
 		return bloc;
 	}

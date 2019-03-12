@@ -2,6 +2,8 @@ package plic.repint;
 
 import java.util.LinkedList;
 
+import plic.exceptions.SemantiqueException;
+
 public class Bloc {
 	private LinkedList<Instruction> instructions;
 	
@@ -9,16 +11,13 @@ public class Bloc {
 		this.instructions = new LinkedList<Instruction>();
 	}
 	
-	public void addInstruction(Instruction i) {
+	public void add(Instruction i) {
 		this.instructions.add(i);
 	}
 	
-	public void removeInstruction(int index) {
-		this.instructions.remove(index);
-	}
-	
-	public void verifier() {
-		
+	public void verifier() throws SemantiqueException {
+		for(Instruction i : this.instructions)
+			i.verifier();
 	}
 	
 	public String toString() {

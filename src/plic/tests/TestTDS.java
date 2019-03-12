@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import plic.exceptions.DoubleDeclarationException;
+import plic.exceptions.SemantiqueException;
 import plic.repint.Entree;
 import plic.repint.Symbole;
 import plic.repint.TDS;
@@ -64,6 +65,16 @@ public class TestTDS {
 		this.tds.ajouter(new Entree("c"), new Symbole("entier"));
 		this.tds.ajouter(new Entree("c"), new Symbole("entier"));
 		assertTrue("Une exception est censé être levée", false);
+	}
+	
+	@Test
+	public void test_verifierTDS() throws DoubleDeclarationException {
+		Entree e54 = new Entree("jojo");
+		Symbole sym = new Symbole("entier");
+		
+		this.tds.ajouter(e54, sym);
+		assertEquals("Jojo devrait etre trouve", this.tds.identifier(e54), sym);
+		assertEquals("Jaja n'existe pas et doit etre null", this.tds.identifier(new Entree("jaja")), null);
 	}
 
 }

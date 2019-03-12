@@ -1,12 +1,7 @@
 package plic.repint;
 
+import plic.exceptions.SemantiqueException;
+
 public abstract class Instruction {
-	/*
-	public Instruction() {
-		
-	}
-	
-	public String toString() {
-		return "Instruction :";
-	}*/
+	public abstract void verifier() throws SemantiqueException;
 }

@@ -19,4 +19,8 @@ public class Nombre extends Expression {
 		}
 		return true;
 	}
+	
+	public void verifier() {
+		//Nothing to do
+	}
 }

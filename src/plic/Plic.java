@@ -6,6 +6,7 @@ import java.io.IOException;
 import plic.analyse.AnalyseurSyntaxique;
 import plic.exceptions.DoubleDeclarationException;
 import plic.exceptions.ErreurSyntaxique;
+import plic.exceptions.SemantiqueException;
 import plic.repint.Bloc;
 
 public class Plic {
@@ -19,6 +20,8 @@ public class Plic {
 			System.out.println("ERREUR: " + e.getMessage());
 		} catch(DoubleDeclarationException i) {
 			System.out.println("ERREUR: " + i.getMessage());
+		} catch(SemantiqueException h) {
+			System.out.println("ERREUR: " + h.getMessage());
 		} catch(IOException f) {
 			System.out.println("ERREUR: " + f.getMessage());
 		} catch(ArrayIndexOutOfBoundsException g) {
@@ -26,7 +29,7 @@ public class Plic {
 		}
 	}
 	
-	public Plic(String nomFichier) throws IOException, ErreurSyntaxique, DoubleDeclarationException {
+	public Plic(String nomFichier) throws IOException, ErreurSyntaxique, DoubleDeclarationException, SemantiqueException {
 		File file = new File(nomFichier);
 		//On instancie l'analyseur syntaxique
 		AnalyseurSyntaxique as = new AnalyseurSyntaxique(file);
