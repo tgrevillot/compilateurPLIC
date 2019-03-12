@@ -1,0 +1,22 @@
+//Programme utilisé pour le compilateur PLIC0
+programme prgmSimple {
+	// Déclaration de variables PLIC
+	entier a1 ;
+	entier a3 ; // Nom de a3
+	
+	// Affectation de 0 dans a1
+	a1 := 0 ;
+	
+	// Affichage de a1
+	ecrire a1 ;
+	
+	// Affectation de 56 dans a3
+	a3 := 56 ;
+	
+	// Affichage de a3
+	ecrire a3 ;
+	
+	jj1 = - 34 ;
+}
+// Sert a rien
+//Truc cool

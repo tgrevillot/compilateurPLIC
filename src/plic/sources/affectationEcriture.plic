@@ -1,0 +1,14 @@
+// Programme utilisé pour le compilateur PLIC0
+
+programme affectationEcriture {
+	// Déclaration de deux variables
+	entier res ;
+	entier res2 ;
+	
+	// Affectation de ces variables
+	res1 := 2 ;
+	res2 := 5 ;
+	
+	// Affichage de res1
+	ecrire res1 ;
+}

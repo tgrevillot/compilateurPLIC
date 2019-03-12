@@ -1,0 +1,14 @@
+//Coucou
+//Sert a rien
+programme bb { //Un commentaire lambda
+	//Salut
+	entier a ;
+	entier bonjour ;
+	
+	bonjour := 6 ; //Coucou2
+	a := 5 ;
+	ecrire a ;
+	bonjour := a ;
+}
+//Coucou
+

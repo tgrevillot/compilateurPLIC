@@ -1,0 +1,19 @@
+//Programme compatible avec le compilateur PLIC0
+
+programme prgmSimpleFaux {
+	entier a1 ;
+	
+	a2 := 0 ;
+	
+	a3 = faux ;
+	
+	a2 := faux ;
+	
+	entier a4 ;
+	
+	a4 := -5 ;
+	
+	ecrire a6 ;
+	
+	ecrire a5 ;	
+}
